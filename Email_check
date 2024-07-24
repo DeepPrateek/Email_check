@@ -1,0 +1,27 @@
+email = input("Check a email ")
+email = email.strip()
+if email==email.lower():
+    if email.endswith("@gmail.com"):
+        if email.count('@')==1 and email.count('.')==1:
+            
+            for i in email:
+                valid = True
+                
+                if not (i.isalpha() or i.isdigit() or i in "@_."):
+                    valid = False
+                    break
+            if not valid:
+                
+                print("wrong email because you give wrong charactor")
+              
+            else:
+                print("Valid Email")
+        else:
+            print("wrong email because you give more than 1 @")
+        
+    else:
+        print("wrong email because you don't write @gmail.com")
+   
+    
+else:
+    print("wrong email because of upper case")
